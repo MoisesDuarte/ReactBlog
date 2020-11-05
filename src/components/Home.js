@@ -1,17 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import Footer from './Footer';
 import HeroImg from '../assets/hero_image.jpg'
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Hero img={HeroImg}>
         <DescriptionCard backgroundColor="#e43b44">
           <h1>Title</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptates aliquid possimus ullam? Itaque fugit deserunt fuga voluptatem quibusdam expedita sed velit, quas alias sapiente magnam ratione perspiciatis non fugiat.</p>
-        </DescriptionCard>
+        </DescriptionCard>       
       </Hero>
-    </main>
+
+      <InfoSection backgroundColor="#e34b44">
+        <h1>Introduction</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente repellendus excepturi blanditiis sit optio quae rerum nesciunt, quibusdam debitis? Iste commodi iure quo recusandae corporis veritatis quia deleniti nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsam possimus dignissimos exercitationem consequatur fugit nulla, at recusandae, natus itaque, cupiditate eos eaque quasi eius. Saepe, odit porro. Architecto, quibusdam!
+        </p>  
+      </InfoSection>
+      
+      <Footer>
+        
+      </Footer>
+    </>
   )
 }
 
@@ -38,6 +51,13 @@ const DescriptionCard = styled.div`
     margin-top: 16px;
     margin-bottom: 0;
   }
+`
+
+const InfoSection = styled.section`
+  background: ${props => props.backgroundColor};
+  color: ${props => props.textColor ? props.textColor : 'white'};
+  padding: 2rem;
+  font-size: 1.375rem;
 `
 
 export default Home;
